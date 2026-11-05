@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meng-Lin (Leo) Tsai | Commercial Insight &amp; AI Portfolio</title>
+<meta name="description" content="Selected projects in customer research, business analytics, commercial strategy and AI-enabled workflows.">
+<meta name="theme-color" content="#EDEAE0">
+<meta property="og:title" content="Meng-Lin (Leo) Tsai | Commercial Insight &amp; AI Portfolio">
+<meta property="og:description" content="Selected projects in customer research, business analytics, commercial strategy and AI-enabled workflows.">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    --paper: #EDEAE0;
+    --paper-alt: #E2DECF;
+    --ink: #20262F;
+    --ink-soft: #525862;
+    --rule: #C7BFA8;
+    --verified: #7C5A22;
+    --flag: #8B3A2B;
+    --link: #28455E;
+    --radius: 2px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #171A1F;
+      --paper-alt: #1E2228;
+      --ink: #E7E2D3;
+      --ink-soft: #A7A190;
+      --rule: #3A3F3C;
+      --verified: #D7A94B;
+      --flag: #DD7E70;
+      --link: #6FA0C7;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--link); text-decoration: none; border-bottom: 1px solid currentColor; }
+  a:hover { opacity: 0.75; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+
+  .display {
+    font-family: "Arial Black", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  .mono {
+    font-family: "SF Mono", "JetBrains Mono", Consolas, Menlo, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+  .eyebrow {
+    font-family: "SF Mono", Consolas, Menlo, monospace;
+    font-size: 11.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .sheet {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+  .prose { max-width: 680px; }
+
+  .topbar {
+    border-bottom: 1px solid var(--rule);
+    padding: 18px 0;
+  }
+  .topbar-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .brand { display: flex; align-items: baseline; gap: 10px; }
+  .brand .display { font-size: 17px; letter-spacing: 0.01em; }
+  .topnav { display: flex; gap: 22px; flex-wrap: wrap; }
+  .topnav a { border-bottom: none; font-family: "SF Mono", Consolas, monospace; font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); }
+  .topnav a:hover { color: var(--link); }
+
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+
+  .cover { padding: 56px 0 44px; border-bottom: 1px solid var(--rule); }
+  .docket {
+    font-family: "SF Mono", Consolas, monospace;
+    font-size: 12px;
+    color: var(--ink-soft);
+    letter-spacing: 0.08em;
+    margin: 0 0 18px;
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .docket span { white-space: nowrap; }
+  .cover h1 { font-size: clamp(34px, 5vw, 54px); line-height: 1.04; margin: 0 0 18px; }
+  .cover .tagline {
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 19px;
+    margin: 0 0 22px;
+    max-width: 560px;
+  }
+  .ctarow { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 8px; }
+  .cta {
+    font-family: "SF Mono", Consolas, monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border: 1px solid var(--ink);
+    padding: 10px 16px;
+    color: var(--ink);
+  }
+  .cta.primary { background: var(--ink); color: var(--paper); }
+  .cta.primary:hover { opacity: 0.85; }
+
+  .pillars {
+    padding: 36px 0;
+    border-bottom: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .pillar .eyebrow { margin-bottom: 8px; }
+  .pillar h3 { margin: 0 0 6px; font-size: 16px; letter-spacing: 0; }
+  .pillar p { margin: 0; color: var(--ink-soft); font-size: 15px; }
+
+  .section { padding: 54px 0; border-bottom: 1px solid var(--rule); }
+  .section-head {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+    align-items: baseline;
+  }
+  .section-num {
+    font-family: "SF Mono", Consolas, monospace;
+    font-size: 13px;
+    color: var(--ink-soft);
+    border-right: 1px solid var(--rule);
+    padding-right: 14px;
+  }
+  .section-head h2 { margin: 0 0 8px; font-size: 26px; }
+  .section-head p { margin: 0; color: var(--ink-soft); max-width: 620px; font-size: 15.5px; }
+
+  .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+  .card {
+    background: var(--paper-alt);
+    border: 1px solid var(--rule);
+    padding: 22px 22px 20px;
+    border-radius: var(--radius);
+    position: relative;
+  }
+  .card.wide { grid-column: 1 / -1; }
+  .tag-row { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+  .tag {
+    font-family: "SF Mono", Consolas, monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: var(--radius);
+    border: 1px solid currentColor;
+  }
+  .tag.confirmed { color: var(--verified); }
+  .tag.modelled { color: var(--flag); }
+  .tag.coursework { color: var(--ink-soft); }
+  .tag.authorship { color: var(--link); }
+  .card .meta { font-family: "SF Mono", Consolas, monospace; font-size: 11.5px; color: var(--ink-soft); margin-bottom: 10px; }
+  .card h3 { margin: 0 0 10px; font-size: 18px; line-height: 1.3; }
+  .card p { margin: 0 0 12px; font-size: 15px; color: var(--ink); }
+  .card .caveat { font-size: 12.5px; color: var(--ink-soft); font-style: italic; margin-bottom: 12px; }
+  .card .link-out { font-size: 13px; }
+
+  .stat-row { display: flex; gap: 22px; margin: 10px 0 14px; flex-wrap: wrap; }
+  .stat .num { display: block; font-family: "SF Mono", Consolas, monospace; font-size: 22px; color: var(--ink); font-weight: 700; }
+  .stat .label { font-size: 11.5px; color: var(--ink-soft); }
+
+  .steps { display: flex; flex-direction: column; gap: 6px; margin: 10px 0 14px; padding-left: 0; list-style: none; }
+  .steps li { font-size: 13.5px; color: var(--ink-soft); }
+  .steps .step-no { font-family: "SF Mono", Consolas, monospace; color: var(--ink); margin-right: 6px; }
+
+  .about-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; }
+  .skills dt { font-family: "SF Mono", Consolas, monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); margin-top: 14px; }
+  .skills dd { margin: 4px 0 0; font-size: 14.5px; }
+
+  footer { padding: 40px 0 60px; }
+  .footer-row { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 14px; }
+  .footer-links { display: flex; gap: 18px; font-family: "SF Mono", Consolas, monospace; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .footer-links a { border-bottom: none; color: var(--ink-soft); }
+  .footer-links a:hover { color: var(--link); }
+
+  @media (max-width: 760px) {
+    .pillars { grid-template-columns: 1fr; gap: 20px; }
+    .cards { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; }
+    .section-head { grid-template-columns: 1fr; }
+    .section-num { border-right: none; border-bottom: 1px solid var(--rule); padding-bottom: 6px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="sheet topbar-row">
+    <div class="brand">
+      <span class="display">MENG-LIN (LEO) TSAI</span>
+    </div>
+    <nav class="topnav">
+      <a href="#commercial">Commercial</a>
+      <a href="#analysis">Analysis</a>
+      <a href="#ai">AI workflows</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<div class="sheet">
+
+  <section class="cover">
+    <div>
+      <p class="docket"><span>COMMERCIAL INSIGHT</span><span>DATA ANALYSIS</span><span>AI-ENABLED WORKFLOWS</span></p>
+      <h1 class="display">From business<br>questions to<br>clear decisions.</h1>
+      <p class="tagline">Commercial insight, data analysis and AI-enabled workflows — evidence tagged, assumptions disclosed, nothing overstated.</p>
+      <div class="ctarow">
+        <a class="cta primary" href="cv.html">Read CV →</a>
+        <a class="cta" href="#commercial">Explore the work</a>
+        <a class="cta" href="https://github.com/Morning523">GitHub ↗</a>
+        <a class="cta" href="https://www.linkedin.com/in/menglin-tsai-51228a213">LinkedIn ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pillars">
+    <h2 class="visually-hidden">Capabilities</h2>
+    <div class="pillar">
+      <p class="eyebrow">Commercial thinking</p>
+      <h3>Customer evidence → decision</h3>
+      <p>Needs, market context and trade-offs tied to a practical next step, not a slide of observations.</p>
+    </div>
+    <div class="pillar">
+      <p class="eyebrow">Analysis &amp; coding</p>
+      <h3>Python · R · SQL · Tableau</h3>
+      <p>Statistical and predictive methods applied to a stated business question, with the method shown.</p>
+    </div>
+    <div class="pillar">
+      <p class="eyebrow">AI workflow design</p>
+      <h3>Agents with a defined job</h3>
+      <p>AI used to connect research, files and tools into repeatable work, with a human check where it matters.</p>
+    </div>
+  </section>
+
+  <section class="section" id="commercial">
+    <div class="section-head">
+      <span class="section-num mono">EX.<br>01</span>
+      <div>
+        <h2>Commercial insight</h2>
+        <p>Projects where customer evidence, market context or a trade-off led to a practical next step.</p>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card wide">
+        <div class="tag-row"><span class="tag confirmed">Confirmed</span></div>
+        <div class="meta">Client project · Warwick Business School × BT Business · Python / R / Excel / AI-assisted workflow</div>
+        <h3>Building a customer-needs view for BT Business</h3>
+        <p>Led customer-needs research in a three-person consulting team, analysing UK business survey evidence and structuring 60 needs into 10 categories; contributed to exploratory needs-based segmentation by reviewing candidate profiles against the framework.</p>
+        <ol class="steps">
+          <li><span class="step-no">01</span>Review customer evidence — survey &amp; competitor context</li>
+          <li><span class="step-no">02</span>Organise needs — 60 needs grouped into 10 themes</li>
+          <li><span class="step-no">03</span>Explore customer profiles against the needs framework</li>
+          <li><span class="step-no">04</span>Frame next steps — messages, propositions, sales questions</li>
+        </ol>
+        <p class="caveat">Client data and internal segmentation details are omitted; recommendations are not claimed as implemented results.</p>
+        <p class="link-out"><a href="https://github.com/Morning523/Morning523-b2b-segmentation-methodology">View anonymised methodology and code ↗</a></p>
+      </div>
+
+      <div class="card">
+        <div class="tag-row"><span class="tag modelled">Modelled</span></div>
+        <div class="meta">Enactus × WCS Case Competition · Winner · Market research / DCF / IRR</div>
+        <h3>Biofuel market-entry strategy</h3>
+        <p>Led the financial case and risk-assessment section evaluating whether fictional company Aether Energy should enter biofuels, recommending a processing joint venture paired with organic distribution growth.</p>
+        <div class="stat-row">
+          <div class="stat"><span class="num">31.9%</span><span class="label">modelled IRR</span></div>
+          <div class="stat"><span class="num">$113.1m</span><span class="label">modelled NPV</span></div>
+        </div>
+        <p class="caveat">Public market data and stated assumptions; returns are model outputs, not realised results.</p>
+        <p class="link-out"><a href="https://github.com/Morning523/Morning523-analytics-coursework-portfolio/blob/main/case-studies/biofuel-market-entry-strategy/biofuel_market_entry_strategy.md">Read the full case &amp; model ↗</a></p>
+      </div>
+
+      <div class="card">
+        <div class="tag-row"><span class="tag coursework">Coursework</span></div>
+        <div class="meta">Team coursework · SQL / Tableau</div>
+        <h3>When do subscription customers churn?</h3>
+        <p>Queried a fictional subscription business and compared cancellation patterns by plan and lifecycle, translating findings into retention questions for the business.</p>
+        <div class="stat-row">
+          <div class="stat"><span class="num">60.4%</span><span class="label">cancellations within first 3 deliveries</span></div>
+        </div>
+        <p class="caveat">Simulated coursework dataset, not a real company.</p>
+        <p class="link-out"><a href="https://github.com/Morning523/Morning523-analytics-coursework-portfolio">View SQL → Tableau project ↗</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="analysis">
+    <div class="section-head">
+      <span class="section-num mono">EX.<br>02</span>
+      <div>
+        <h2>Data analysis &amp; coding</h2>
+        <p>Grouped by method so a reader can scan the kinds of problems worked on, not just the titles.</p>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="tag-row"><span class="tag coursework">Coursework</span></div>
+        <div class="meta">R · Regression · Visualisation</div>
+        <h3>Patterns in people, spending and place</h3>
+        <p>Regression, interaction analysis, confidence intervals and visualisation across podcast-listening, household-spending and London Underground temperature data.</p>
+        <p class="link-out"><a href="https://github.com/Morning523/Morning523-analytics-coursework-portfolio/tree/main/projects/statistical-analysis">View statistical analyses ↗</a> · <a href="https://github.com/Morning523/Morning523-analytics-coursework-portfolio/tree/main/projects/underground-temperature-statistics">Underground analysis ↗</a></p>
+      </div>
+      <div class="card">
+        <div class="tag-row"><span class="tag coursework">Coursework</span></div>
+        <div class="meta">Python · Optimisation · Simulation</div>
+        <h3>Exploring World Cup operations</h3>
+        <p>Scenario modelling for tournament group formation, qualification paths, match interest and stadium assignment under stated assumptions.</p>
+        <p class="link-out"><a href="https://github.com/Morning523/Morning523-analytics-coursework-portfolio/tree/main/projects/world-cup-operations">View Python project ↗</a></p>
+      </div>
+      <div class="card">
+        <div class="tag-row"><span class="tag coursework">Coursework</span></div>
+        <div class="meta">Python · scikit-learn</div>
+        <h3>Comparing models on an imbalanced dataset</h3>
+        <p>Six classifier families compared alongside resampling, feature selection and hyperparameter tuning, using metrics suited to minority-class performance.</p>
+        <p class="link-out"><a href="https://github.com/Morning523/Morning523-analytics-coursework-portfolio/tree/main/projects/classification-model-comparison">View classification-model-comparison ↗</a></p>
+      </div>
+      <div class="card">
+        <div class="tag-row"><span class="tag coursework">Coursework</span></div>
+        <div class="meta">Python · PyTorch</div>
+        <h3>Neural-network credit application case</h3>
+        <p>Prepared a credit-application dataset, compared baseline and optimised neural-network models, and examined evaluation across pre-defined risk segments.</p>
+        <p class="link-out"><a href="https://github.com/Morning523/Morning523-analytics-coursework-portfolio/tree/main/projects/credit-risk-modelling">View credit-risk-modelling ↗</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="ai">
+    <div class="section-head">
+      <span class="section-num mono">EX.<br>03</span>
+      <div>
+        <h2>AI workflows &amp; automation</h2>
+        <p>How a workflow idea becomes an inspectable tool, with rules, integrations and a human review point.</p>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="tag-row"><span class="tag authorship">Fork · credited to original author</span></div>
+        <div class="meta">Source-backed responses</div>
+        <h3>Hormozi Advisor Skill</h3>
+        <p>Maps a question to a growth constraint, grounds recommendations in a curated knowledge base, and separates evidence from inference.</p>
+        <p class="caveat">Independent, non-official project; not affiliated with Alex Hormozi or Acquisition.com.</p>
+        <p class="link-out"><a href="https://github.com/Morning523/hormozi-advisor-skill">View repository ↗</a></p>
+      </div>
+      <div class="card">
+        <div class="tag-row"><span class="tag authorship">Built by me · AI-assisted</span></div>
+        <div class="meta">Google Apps Script · APIs</div>
+        <h3>Ops Automation Toolkit</h3>
+        <p>Prototypes for monitoring website updates and capturing tasks across LINE, Calendar and Notion, with ambiguity checks and step-level outcome messages.</p>
+        <p class="caveat">AI-assisted implementation; my contribution was requirements, edge cases, testing and deciding when to ask a person rather than guess.</p>
+        <p class="link-out"><a href="https://github.com/Morning523/ops-automation-toolkit">View repository ↗</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about-grid" id="about">
+    <div class="prose">
+      <p class="eyebrow">About</p>
+      <h2 style="margin:8px 0 14px;font-size:24px;">Commercial experience, analytical training.</h2>
+      <p>My background spans B2B account development, customer research and marketing. I enjoy working from an unclear commercial question to evidence, a useful interpretation and a practical recommendation — and building tools that make repeatable work easier.</p>
+    </div>
+    <dl class="skills">
+      <dt>Analytics</dt><dd>Python, R, SQL, Tableau, Excel, Power Query</dd>
+      <dt>Methods</dt><dd>Customer research, segmentation, statistical analysis, classification, model evaluation</dd>
+      <dt>AI &amp; automation</dt><dd>AI agents, workflow prototyping, MCP and API integration</dd>
+      <dt>Commercial</dt><dd>Account development, needs assessment, proposals, partnerships</dd>
+      <dt>Languages</dt><dd>English and Mandarin Chinese</dd>
+    </dl>
+  </section>
+
+  <footer id="contact">
+    <div class="footer-row">
+      <p class="eyebrow" style="margin:0;">For roles in customer insight, commercial analysis &amp; AI-enabled workflows</p>
+      <div class="footer-links">
+        <a href="mailto:leotsai2802@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/menglin-tsai-51228a213">LinkedIn ↗</a>
+        <a href="cv.html">CV ↗</a>
+        <a href="https://github.com/Morning523">GitHub ↗</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
